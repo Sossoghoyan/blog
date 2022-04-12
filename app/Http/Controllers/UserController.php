@@ -9,6 +9,8 @@ class UserController extends Controller
 {
     public function show($id, Request $request)
     {
+        DB::table('users')->where('role', 'admin')->add();
+        echo 222;
         // DB::table('companies')->insert(
         //     [
         //     ['title' => 'Facebook'],
@@ -32,8 +34,8 @@ class UserController extends Controller
     //         ['name' => 'Artsakh']
     //     );
 
- $count = DB::table('countries')->where('name', 'Artsakh')->get();//first()
-        dd($count);
+ //$count = DB::table('countries')->where('name', 'Artsakh')->get();//first()
+        //dd($count);
 
 
         ///             das     ///
