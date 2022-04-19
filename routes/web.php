@@ -5,6 +5,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\countries;
+use App\Http\Controllers\FlightController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ use App\Http\Controllers\countries;
 */
 
 Route::get('/', [IndexController::class, 'index']);
+
+Route::get('/flights', [FlightController::class, 'index']);
 
 Route::get('/test', function () {
     return view('test', [
