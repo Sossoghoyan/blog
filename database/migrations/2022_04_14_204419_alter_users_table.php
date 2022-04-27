@@ -11,19 +11,19 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('votes')->after('email');
-            $table->string('name', 50)->nullable()->change();
+    // public function up()
+    // {
+    //     Schema::table('users', function (Blueprint $table) {
+    //         $table->integer('votes')->after('email');
+    //         $table->string('name', 50)->nullable()->change();
 
-        });
-        Schema::table('users', function (Blueprint $table) {
-            $table->renameColumn('role', 'new_role');
-        });
+    //     });
+    //     Schema::table('users', function (Blueprint $table) {
+    //         $table->renameColumn('role', 'new_role');
+    //     });
 
 
-    }
+    // }
 
     /**
      * Reverse the migrations.

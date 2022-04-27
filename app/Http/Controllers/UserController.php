@@ -9,14 +9,15 @@ class UserController extends Controller
 {
     public function show($id, Request $request)
     {
-        //DB::table('users')->where('role', 'admin')->add();
-       // echo 222;
-        // DB::table('companies')->insert(
-        //     [
-        //     ['title' => 'Facebook'],
-        //     ['title' => 'TikTok'],
-        //     ]
-        // );
+    //     DB::table('users')->where('role', 'admin')->add();
+    //    echo 222;
+        DB::table('companies')->insert(
+            [
+            ['title' => 'Facebook'],
+            ['title' => 'TikTok'],
+            ]
+        );
+    }
 
     //     $affected = DB::table('users')
     // ->where('id', 1)
@@ -28,23 +29,23 @@ class UserController extends Controller
     //     ['password' => '456']
     // );
 
-        ///                tnayin              ///
-
+       // /  /              tnayin              ///
+    
     // DB::table('countries')->insert(
     //         ['name' => 'Artsakh']
     //     );
 
-DB::table('countries')
-    ->updateOrInsert(
-        ['name' => 'Artsakh'],
-        ['code' => '051', 'iso_code' => 'AM', 'iso3_code' => 'ARM',
-        'iso_3166_2' => 'ISO 3166-2:AM',
-        'region_code' => '142', 'region_name' => 'Asia',
-        'sub_region_code' => '145', 'sub_region_name' => 'Western Asia'],
-);
+// DB::table('countries')
+//     ->updateOrInsert(
+//         ['name' => 'Artsakh'],
+//         ['code' => '051', 'iso_code' => 'AM', 'iso3_code' => 'ARM',
+//         'iso_3166_2' => 'ISO 3166-2:AM',
+//         'region_code' => '142', 'region_name' => 'Asia',
+//         'sub_region_code' => '145', 'sub_region_name' => 'Western Asia'],
+// );
 
- $count = DB::table('countries')->where('name', 'Artsakh')->get();//first()
-        dd($count);
+//  $count = DB::table('countries')->where('name', 'Artsakh')->get();//first()
+//         dd($count);
 
 
         ///             das     ///
@@ -53,6 +54,6 @@ DB::table('countries')
         //dd($users);
         //dd($request->all());
         //echo "This is User with ID $id";
-    }
+    
 
 }

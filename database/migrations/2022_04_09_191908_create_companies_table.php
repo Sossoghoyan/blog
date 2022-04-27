@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::create('companies', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->string('title', 100);
-        //     $table->timestamps();
-        // });
-        // Schema::table('users', function (Blueprint $table) {
-        //     $table->integer('company_id')->nullable();
-        //     $table->unsignedBigInteger('company_id')->nullable();
-        // });
+        Schema::create('companies', function (Blueprint $table) {
+            $table->id();
+            $table->string('title', 100);
+            $table->timestamps();
+        });
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('company_id')->nullable();
+            $table->unsignedBigInteger('company_id')->nullable();
+        });
 
     }
 
@@ -42,3 +42,6 @@ return new class extends Migration
 
     }
 };
+
+
+
